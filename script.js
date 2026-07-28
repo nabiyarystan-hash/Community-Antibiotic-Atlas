@@ -6,7 +6,6 @@ function loadMap(index) {
     const antibiotic = antibiotics[index];
 
     frame.src = antibiotic.map;
-
 }
 
 antibiotics.forEach((item, index) => {
