@@ -27,3 +27,35 @@ select.addEventListener("change", function () {
 });
 
 loadMap(0);
+function createSmallTable() {
+
+    const tableDiv = document.getElementById("smallTable");
+
+    let html = `
+    <table>
+        <tr>
+            <th>Region</th>
+            <th>C-DID/year</th>
+        </tr>
+    `;
+
+    tableData.forEach(row => {
+
+        html += `
+        <tr>
+            <td>${row.Region}</td>
+            <td>${row.Amoxicillin.toFixed(3)}</td>
+        </tr>
+        `;
+
+    });
+
+
+    html += "</table>";
+
+    tableDiv.innerHTML = html;
+
+}
+
+
+createSmallTable();
