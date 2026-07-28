@@ -94,11 +94,10 @@ createSmallTable();
 
 select.addEventListener("change", function () {
 
+    console.log("Selected:", antibiotics[this.value].name);
 
     loadMap(this.value);
 
-
     createSmallTable();
-
 
 });
