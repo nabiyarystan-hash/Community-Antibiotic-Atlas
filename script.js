@@ -2,6 +2,8 @@ const select = document.getElementById("antibioticSelect");
 const frame = document.getElementById("mapFrame");
 
 
+// Загрузка карты
+
 function loadMap(index) {
 
     const antibiotic = antibiotics[index];
@@ -31,9 +33,11 @@ antibiotics.forEach((item, index) => {
 
 function createSmallTable() {
 
-    console.log("Updating table:", antibiotics[select.value].name);
-
     const tableDiv = document.getElementById("smallTable");
+
+    const selectedAntibiotic = antibiotics[select.value].name;
+
+    console.log("Updating table:", selectedAntibiotic);
 
 
     let html = `
@@ -51,24 +55,27 @@ function createSmallTable() {
     `;
 
 
-
     tableData.forEach(row => {
-
 
         html += `
 
         <tr>
 
             <td>${row.Region}</td>
-<td>${row[selectedAntibiotic] !== undefined ? row[selectedAntibiotic].toFixed(6) : "NA"}</td>
+
+            <td>
+                ${
+                row[selectedAntibiotic] !== undefined
+                ? row[selectedAntibiotic].toFixed(6)
+                : "NA"
+                }
+            </td>
 
         </tr>
 
         `;
 
-
     });
-
 
 
     html += `</table>`;
@@ -80,13 +87,11 @@ function createSmallTable() {
 
 
 
-
-// Первоначальная загрузка карты и таблицы
+// Первоначальная загрузка
 
 loadMap(0);
 
 createSmallTable();
-
 
 
 
@@ -96,10 +101,10 @@ select.addEventListener("change", function () {
 
     console.log("Selected:", antibiotics[this.value].name);
 
+
     loadMap(this.value);
 
-    createSmallTable();
 
-    console.log("Updating table:", antibiotics[this.value].name);
+    createSmallTable();
 
 });
