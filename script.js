@@ -5,10 +5,8 @@ function loadMap(index) {
 
     const antibiotic = antibiotics[index];
 
-    title.textContent =
-        antibiotic.name + " consumption by region, Kazakhstan (2024)";
-
     frame.src = antibiotic.map;
+
 }
 
 antibiotics.forEach((item, index) => {
