@@ -38,9 +38,8 @@ select {
 
 iframe {
     display: block;
-    width: 100%;
-    max-width: 900px;
-    height: 680px;
+    width: 85%;
+    height: 700px;
     margin: 0 auto;
     border: none;
 }
