@@ -44,7 +44,7 @@ function createSmallTable() {
         html += `
         <tr>
             <td>${row.Region}</td>
-            <td>${row.Amoxicillin.toFixed(3)}</td>
+            <td>${row.Amoxicillin.toFixed(6)}</td>
         </tr>
         `;
 
