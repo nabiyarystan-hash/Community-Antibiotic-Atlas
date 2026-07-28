@@ -1,0 +1,33 @@
+const select = document.getElementById("antibioticSelect");
+const frame = document.getElementById("mapFrame");
+const title = document.getElementById("mapTitle");
+
+function loadMap(index) {
+
+    const antibiotic = antibiotics[index];
+
+    title.textContent =
+        antibiotic.name + " consumption by region, Kazakhstan (2024)";
+
+    frame.src = antibiotic.map;
+}
+
+antibiotics.forEach((item, index) => {
+
+    const option = document.createElement("option");
+
+    option.value = index;
+
+    option.textContent = item.name;
+
+    select.appendChild(option);
+
+});
+
+select.addEventListener("change", function () {
+
+    loadMap(this.value);
+
+});
+
+loadMap(0);
