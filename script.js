@@ -60,8 +60,7 @@ function createSmallTable() {
         <tr>
 
             <td>${row.Region}</td>
-
-            <td>${row[selectedAntibiotic].toFixed(6)}</td>
+<td>${row[selectedAntibiotic] !== undefined ? row[selectedAntibiotic].toFixed(6) : "NA"}</td>
 
         </tr>
 
