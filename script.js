@@ -1,6 +1,5 @@
 const select = document.getElementById("antibioticSelect");
 const frame = document.getElementById("mapFrame");
-const title = document.getElementById("mapTitle");
 
 function loadMap(index) {
 
