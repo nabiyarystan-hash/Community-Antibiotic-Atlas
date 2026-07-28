@@ -31,9 +31,9 @@ antibiotics.forEach((item, index) => {
 
 function createSmallTable() {
 
-    const tableDiv = document.getElementById("smallTable");
+    console.log("Updating table:", antibiotics[select.value].name);
 
-    const selectedAntibiotic = antibiotics[select.value].name;
+    const tableDiv = document.getElementById("smallTable");
 
 
     let html = `
