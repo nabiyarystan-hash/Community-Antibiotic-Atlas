@@ -100,4 +100,6 @@ select.addEventListener("change", function () {
 
     createSmallTable();
 
+    console.log("Updating table:", antibiotics[this.value].name);
+
 });
